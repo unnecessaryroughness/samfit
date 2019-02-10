@@ -1,0 +1,42 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: SamFit Alexa Skill
+
+Mappings:
+    Variables:
+        AlexaSkillKit:
+            Id: amzn1.ask.skill.xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+
+Resources:
+    SamFitFunction:
+        Type: AWS::Serverless::Function 
+        Properties:
+            CodeUri: samfit/
+            Handler: app.handler
+            Runtime: nodejs8.10
+            Timeout: 3
+            Events:
+                SamFitSkill:
+                    Type: AlexaSkill
+
+    # HelloWorldFunctionAskPermission:
+    #     Type: AWS::Lambda::Permission
+    #     DependsOn: SamFitFunction
+    #     Properties:
+    #         Action: lambda:InvokeFunction
+    #         EventSourceToken: !FindInMap
+    #             - Variables
+    #             - AlexaSkillKit
+    #             - Id
+    #         FunctionName: !GetAtt SamFitFunction.Arn
+    #         Principal: alexa-appkit.amazon.com
+
+            
+Outputs:
+    SamFitFunction:
+      Description: "SamFit Lambda Function ARN"
+      Value: !GetAtt SamFitFunction.Arn
+
+    SamFitFunctionIamRole:
+      Description: "Implicit IAM Role created for SamFit function"
+      Value: !GetAtt SamFitFunctionRole.Arn
