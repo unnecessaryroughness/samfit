@@ -1,4 +1,4 @@
-module.exports = (baseObj, propPath) => {
+module.exports = (baseObj, propPath, returnValue) => {
   if (!baseObj) {
     return false
   }
@@ -18,5 +18,5 @@ module.exports = (baseObj, propPath) => {
     }
   }
 
-  return true
+  return returnValue ? testObj : true
 }

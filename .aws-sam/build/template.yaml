@@ -24,8 +24,9 @@ Resources:
       Events:
         SamFitSkill:
           Type: AlexaSkill
+      FunctionName: SamFitSkill
       Handler: app.handler
       Runtime: nodejs8.10
-      Timeout: 3
+      Timeout: 10
     Type: AWS::Serverless::Function
 Transform: AWS::Serverless-2016-10-31

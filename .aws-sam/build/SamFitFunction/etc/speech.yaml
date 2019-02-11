@@ -1,0 +1,32 @@
+---
+speech_patterns:
+  salutations:
+    welcome: "<p>Welcome to Sam Fit.</p>"
+    goodbye: "Thank you for using Sam Fit. Goodbye. "
+    help: "You can ask me what is today's workout. "
+  setup:
+    placeholder: "This is placeholder text."
+  gameplay:
+    todays_workout: "<p>Today is a {{var.0}} day. <p>Today's workout is: </p>"
+    followed_by: "<p>followed by</p>"
+    repeat_that: "<p>Would you like me to repeat that for you?</p>"
+  i_would_do_it_with_you:
+    i_would_do_it_with_you_1: "<p>I would do it with you, but I've put my back out!</p>"
+    i_would_do_it_with_you_2: "<p>I would do it with you, but I've just washed my hair!</p>"
+    i_would_do_it_with_you_3: "<p>I would do it with you, but I've double booked myself!</p><p>Again!</p>"
+    i_would_do_it_with_you_4: "<p>I would do it with you, but I'm allergic to something or other!</p>"
+    i_would_do_it_with_you_5: "<p>I would do it with you, but I have my ass-mar!</p>"
+    i_would_do_it_with_you_6: "<p>I would do it with you, but I'm already perfect!</p>"
+  encouragement:
+    good_luck: "<p>Good Luck!</p>"
+    go_get_em: "<p>Go Get Em!</p>"
+    get_stuck_in: "<p>Get Stuck In!</p>"
+    smash_it: "<p>Smash It!</p>"
+    no_pain_no_gain: "<p>No Pain, No Gain!</p>"
+  errors: 
+    fallback_message: "I don't know what happened there! I'm a bit confused. "
+    found_no_weekly_plan: "I couldn't find any data on your weekly plan. "
+    found_no_exercises: "I couldn't find any data on your excersies. "
+    yes_out_of_context: "Sorry, I don't understand what you are saying 'Yes' in response to. Try asking me something else. "
+    no_out_of_context: "Sorry, I don't understand what you are saying 'No' in response to. Try asking me something else. "
+  
