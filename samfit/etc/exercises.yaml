@@ -3,32 +3,32 @@ exercises:
   rest:
     - rest day
   cardio:
-    - running:
+    - exercise: running
       unit: minutes
       min: 20
       max: 40
-    - zumba:
+    - exercise: zumba
       unit: minutes
       min: 60
       max: 60
-    - walking:
+    - exercise: walking
       unit: minutes
       min: 40
       max: 80
   toning:
-    - squats:
+    - exercise: squats
       unit: reps
       min: 20
-      max: 40
-    - press ups:
+      max: 60
+    - exercise: press ups
       unit: reps
       min: 20
-      max: 40
-    - lunges:
+      max: 60
+    - exercise: lunges
       unit: reps
       min: 20
-      max: 40
-    - plank:
+      max: 60
+    - exercise: plank
       unit: 30 second reps
       min: 2
       max: 4

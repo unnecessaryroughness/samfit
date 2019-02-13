@@ -14,6 +14,7 @@
     "axios": "^0.18.0",
     "jmespath": "^0.15.0",
     "js-yaml": "^3.12.1",
+    "random-int": "^1.0.0",
     "weekday": "^3.0.1"
   },
   "scripts": {

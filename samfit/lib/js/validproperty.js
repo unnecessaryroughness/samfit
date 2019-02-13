@@ -9,7 +9,7 @@ module.exports = (baseObj, propPath, returnValue) => {
 
   while (propComponents.length > 0) {
     nextProp = propComponents.pop()  
-    console.log('testing: ', testObj, 'for: ', nextProp)
+    // console.log('testing: ', testObj, 'for: ', nextProp)
     if (testObj[nextProp]) {
       testObj = testObj[nextProp]
     } else {
