@@ -6,13 +6,11 @@ module.exports = {
     canHandle(handlerInput) {
       const request = handlerInput.requestEnvelope.request
       return request.type === 'IntentRequest'
-        &&  (request.intent.name === 'AMAZON.CancelIntent'
-          || request.intent.name === 'AMAZON.StopIntent')
+             && (request.intent.name === 'AMAZON.CancelIntent'
+                 || request.intent.name === 'AMAZON.StopIntent')
     },
     handle(handlerInput) {
-      let sessionData = sessionManager.getSession(handlerInput) 
-      let askedQuestionsOnly = JMESPATH.search(sessionData.questionList, '[?asked]').length
-      speechText = parseSpeech('gameplay', 'stop_game', sessionData.score, sessionData.score != 1 ? 's' : '', askedQuestionsOnly)
+      speechText = parseSpeech('salutations', 'goodbye')
 
       return handlerInput.responseBuilder
         .speak(speechText)

@@ -20,12 +20,13 @@ Outputs:
 Resources:
   SamFitFunction:
     Properties:
-      CodeUri: s3://tonksdev-sam/bfdcdf9c605e72e330f35b95d3133cdb
+      CodeUri: s3://tonksdev-sam/ade4c690a5870f109840cb84e0cac6b7
       Events:
         SamFitSkill:
           Type: AlexaSkill
+      FunctionName: SamFitSkill
       Handler: app.handler
       Runtime: nodejs8.10
-      Timeout: 3
+      Timeout: 10
     Type: AWS::Serverless::Function
 Transform: AWS::Serverless-2016-10-31

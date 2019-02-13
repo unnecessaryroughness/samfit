@@ -12,9 +12,10 @@ Resources:
         Type: AWS::Serverless::Function 
         Properties:
             CodeUri: samfit/
+            FunctionName: SamFitSkill
             Handler: app.handler
             Runtime: nodejs8.10
-            Timeout: 3
+            Timeout: 10
             Events:
                 SamFitSkill:
                     Type: AlexaSkill

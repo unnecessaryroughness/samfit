@@ -1,0 +1,45 @@
+---
+weeklyplan:
+  monday:
+    cardio:
+    toning:
+      totalreps: 50
+      toningexercises:
+        - squats
+        - press ups
+  tuesday:
+    cardio:
+      totalmins: 60
+      cardioexercises:
+        - zumba
+    toning:
+      totalreps: 100
+      toningexercises:
+        - random
+  wednesday:
+    rest:
+      - rest day
+  thursday:
+    cardio:
+    toning:
+      totalreps: 100
+      toningexercises:
+        - random
+  friday:
+    cardio:
+    toning:
+      totalreps: 100
+      toningexercises:
+        - random
+  saturday:
+    cardio:
+      totalmins: 120
+      cardioexercises:
+        - walking
+    toning:
+  sunday:
+    cardio:
+      totalmins: 60
+      cardioexercises:
+        - zumba
+    toning:

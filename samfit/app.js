@@ -8,7 +8,8 @@ exports.handler = skillBuilder
     require('./lib/handlers/sessionstartedhandler'),
     require('./lib/handlers/sessionendedhandler'),
     require('./lib/handlers/helphandler'),
-    require('./lib/handlers/unhandledhandler')  
+    require('./lib/handlers/stophandler'),  
+    require('./lib/handlers/fallbackhandler')  
   )
   .addErrorHandlers(require('./lib/handlers/errorhandler'))
   .lambda()

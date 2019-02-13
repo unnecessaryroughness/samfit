@@ -1,20 +1,10 @@
 
 function sessionTemplate () {
-  this.questionList = [],
-  this.currentQuestion = 0,
-  this.suspendUnhandled = false,
-  this.gameType = '',
   this.lastAction = '',
-  this.score = 0,
   this.speechText = '',
   this.load = (loadData) => {
     if (loadData) {
-      this.questionList = JSON.parse(JSON.stringify(loadData.questionList))
-      this.currentQuestion = loadData.currentQuestion
-      this.suspendUnhandled = loadData.suspendUnhandled
-      this.gameType = loadData.gameType
       this.lastAction = loadData.lastAction
-      this.score = loadData.score
       this.speechText = loadData.speechText
     }
     return this

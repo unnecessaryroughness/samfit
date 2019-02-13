@@ -1,45 +1,26 @@
-const questionSearch  = require('../js/questionsearch')
-const parseSpeech     = require('../js/parsespeech')
-const validProperty   = require('../js/validproperty')
-const questionManager = require('../js/questionmanager')
-const sessionManager  = require('../js/sessionmanager')
-const constructPrompt = require('../js/constructprompt')
-const JMESPATH        = require('jmespath')
+const parseSpeech      = require('../js/parsespeech')
+const parser           = require('../js/parsetext')
+const sessionManager   = require('../js/sessionmanager')
+const calculateWorkout = require('../js/calculateworkout')
+// const validProperty   = require('../js/validproperty')
+// const JMESPATH        = require('jmespath')
 
 module.exports = {
   canHandle(handlerInput) {
     let { type, intent } = handlerInput.requestEnvelope.request
-    return type === 'LaunchRequest' || (type === 'IntentRequest' && intent.name === 'StartGameIntent')
+    return type === 'LaunchRequest' || (type === 'IntentRequest' && intent.name === 'WorkoutIntent')
   },
   handle(handlerInput) {
     const request = handlerInput.requestEnvelope.request
-    const slots = validProperty(request, 'intent.slots') ? request.intent.slots : null
+    const skillName = parser.getYamlField('config', 'SamFitSkill.SkillName')
     let speechText = parseSpeech('salutations', 'welcome')
-    let sessionData = sessionManager.getSession(handlerInput)
-
-    if (validProperty(slots, 'textname.value')) {
-      let requestedText = slots.textname.value
-      let questionSet = questionSearch(requestedText)  
-      sessionData.questionList = questionManager.prepQuestions(questionSet)
-      let totalQuestions = sessionData.questionList.length
-      
-      if (totalQuestions == 0) {
-        speechText = parseSpeech('errors', 'found_no_questions', requestedText)        
-        sessionData.lastAction = 'foundnoquestions'
-      } else {
-        speechText = parseSpeech('setup', 'question_prep', totalQuestions , requestedText)
-        speechText += parseSpeech('setup', 'which_game_type')
-        sessionData.lastAction = 'askforgametype'
-      } 
-    } else {
-      sessionData.questionList = []
-      sessionData.lastAction = 'pickaquiz'
-      speechText += parseSpeech('salutations', 'pick_a_quiz')
-    }
     
-    sessionManager.updateSession(handlerInput, sessionData)
+    speechText += calculateWorkout()
 
-    let skillName = 'GCSE Quotes'
+    let sessionData = sessionManager.getSession(handlerInput) 
+    sessionData.lastAction = request.type === 'LaunchRequest' ? 'session-started' : 'get-workout'
+    sessionData.speechText = speechText
+    sessionManager.updateSession(handlerInput, sessionData)
 
     return handlerInput.responseBuilder
       .speak(speechText)

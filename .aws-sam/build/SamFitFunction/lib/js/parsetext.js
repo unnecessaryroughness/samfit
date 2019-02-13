@@ -3,14 +3,16 @@
 const YAML      = require('js-yaml'),
       FS        = require('fs'),
       PATH      = require('path'),
-      YAMLROOT  = './etc/',
-      YAMLEXT   = '.yml',
+      VALIDPROP = require('./validproperty')
+      
+const YAMLROOT  = './etc/',
+      YAMLEXT   = '.yaml',
       FORMAT    = 'utf8'
 
-const parseYaml = (yamlFile, subdir) => {
+const parseYaml = (yamlFile) => {
   try {
     const yamlFilePath = PATH.format({
-      root: YAMLROOT + (subdir ? subdir.concat('/') : ''), 
+      root: YAMLROOT, 
       name: yamlFile,
       ext: YAMLEXT
     })
@@ -21,20 +23,17 @@ const parseYaml = (yamlFile, subdir) => {
   }
 }
 
-const parseTextYaml = (yamlFile) => {
+const getYamlField = (yamlFile, yamlPath) => {
   try {
-    var doc = parseYaml(yamlFile, 'texts')
-    return {
-      text: doc.text.title,
-      quotes: doc.text.quotes,
-      length: doc.text.quotes.length
-    }
+    const parsedFile = parseYaml(yamlFile)
+    return VALIDPROP(parsedFile, yamlPath, true)
   } catch (e) {
-    console.log(`\nerror reading Text YAML file: >>> \n\n`, e, '\n')
+    console.log('\nerror returning path from YAML file\n')
+    return false
   }
 }
 
 module.exports = {
   parseYaml,
-  parseTextYaml
+  getYamlField
 }
