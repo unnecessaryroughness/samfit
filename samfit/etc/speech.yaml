@@ -7,9 +7,12 @@ speech_patterns:
   setup:
     placeholder: "This is placeholder text."
   gameplay:
-    todays_workout: "<p>Today is a {{var.0}} day. <p>Today's workout is: </p>"
-    followed_by: "<p>followed by</p>"
-    repeat_that: "<p>Would you like me to repeat that for you?</p>"
+    today_is_a: "<p>Today is a {{var.0}} day.</p>"
+    todays_workout_is: "<p>Today's workout is: {{var.0}}. </p>"
+    followed_by: "<p>{{var.0}}. </p>"
+    and_finally: "<p>and finally, {{var.0}}. </p>"
+    repeat_that: "<p>Would you like me to repeat that for you? </p>"
+    its_a_rest_day: "<p>Today is a rest day! Take it easy, you've earned it. </p>"
   i_would_do_it_with_you:
     i_would_do_it_with_you_1: "<p>I would do it with you, but I've put my back out!</p>"
     i_would_do_it_with_you_2: "<p>I would do it with you, but I've just washed my hair!</p>"

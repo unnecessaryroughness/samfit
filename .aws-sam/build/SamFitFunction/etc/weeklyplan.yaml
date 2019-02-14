@@ -17,8 +17,6 @@ weeklyplan:
       toningexercises:
         - random: 3
   wednesday:
-    # rest:
-    #   - rest day
     cardio:
       totalmins: 0
       cardioexercises:
@@ -28,6 +26,9 @@ weeklyplan:
         - random: 3
   thursday:
     cardio:
+      totalmins: 60
+      cardioexercises:
+        - random: 1
     toning:
       totalreps: 100
       toningexercises:

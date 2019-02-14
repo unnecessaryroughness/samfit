@@ -49,7 +49,9 @@ const generateRandoms = (requestedExercises, allExercises, totalUnits) => {
         e.actual = (parseInt(e.actual) + diff).toString()
         totalUnits -= diff
         console.log(`padding... ${diff} onto ${e.exercise}`)
-        break
+        if (totalUnits <= 0) {
+          break
+        }
       }
     }
   }
@@ -74,5 +76,8 @@ module.exports = calculateWorkout = () => {
   console.log(cardioexercises)
   console.log(toningexercises)
 
-  return `calculateWorkout Output! - ${weekday}` 
+  return {
+    cardio: cardioexercises,
+    toning: toningexercises
+  }
 }
