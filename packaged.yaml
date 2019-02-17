@@ -20,7 +20,7 @@ Outputs:
 Resources:
   SamFitFunction:
     Properties:
-      CodeUri: s3://tonksdev-sam/7b480145ae0bedfa94a222de57fd1fd4
+      CodeUri: s3://tonksdev-sam/aeb8b83b58a0a98b2829d610b580ca4c
       Events:
         SamFitSkill:
           Type: AlexaSkill
