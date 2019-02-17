@@ -38,13 +38,16 @@ weeklyplan:
     toning:
       totalreps: 100
       toningexercises:
-        - random: 4
+        - random: 3
   saturday:
     cardio:
       totalmins: 120
       cardioexercises:
         - walking
     toning:
+      totalreps: 80
+      toningexercises:
+        - random: 2
   sunday:
     cardio:
       totalmins: 60

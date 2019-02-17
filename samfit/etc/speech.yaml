@@ -1,31 +1,31 @@
 ---
 speech_patterns:
   salutations:
-    welcome: "<p>Welcome to Sam Fit.</p>"
-    goodbye: "Thank you for using Sam Fit. Goodbye. "
+    welcome: "<p>Welcome to Sam's Workout. </p>"
+    goodbye: "Thank you for using Sam's Workout. Goodbye. "
     help: "You can ask me what is today's workout. "
   setup:
     placeholder: "This is placeholder text."
   gameplay:
-    today_is_a: "<p>Today is a {{var.0}} day.</p>"
+    today_is_a: "<p>It's a {{var.0}} day. </p>"
     todays_workout_is: "<p>Today's workout is: {{var.0}}. </p>"
     followed_by: "<p>{{var.0}}. </p>"
     and_finally: "<p>and finally, {{var.0}}. </p>"
     repeat_that: "<p>Would you like me to repeat that for you? </p>"
     its_a_rest_day: "<p>Today is a rest day! Take it easy, you've earned it. </p>"
-  i_would_do_it_with_you:
-    i_would_do_it_with_you_1: "<p>I would do it with you, but I've put my back out!</p>"
-    i_would_do_it_with_you_2: "<p>I would do it with you, but I've just washed my hair!</p>"
-    i_would_do_it_with_you_3: "<p>I would do it with you, but I've double booked myself!</p><p>Again!</p>"
-    i_would_do_it_with_you_4: "<p>I would do it with you, but I'm allergic to something or other!</p>"
-    i_would_do_it_with_you_5: "<p>I would do it with you, but I have my ass-mar!</p>"
-    i_would_do_it_with_you_6: "<p>I would do it with you, but I'm already perfect!</p>"
+  excuses:
+    - "<p>I would do it with you, but I've put my back out! </p>"
+    - "<p>I would do it with you, but I've just washed my hair! </p>"
+    - "<p>I would do it with you, but I've double booked myself! </p><p>Again! </p>"
+    - "<p>I would do it with you, but I'm allergic to something or other! </p>"
+    - "<p>I would do it with you, but I have my ass-mar! </p>"
+    - "<p>I would do it with you, but I'm already perfect! </p>"
   encouragement:
-    good_luck: "<p>Good Luck!</p>"
-    go_get_em: "<p>Go Get Em!</p>"
-    get_stuck_in: "<p>Get Stuck In!</p>"
-    smash_it: "<p>Smash It!</p>"
-    no_pain_no_gain: "<p>No Pain, No Gain!</p>"
+    - "<p>Good Luck! </p>"
+    - "<p>Go Get 'Em! </p>"
+    - "<p>Get Stuck In! </p>"
+    - "<p>Smash It! </p>"
+    - "<p>No Pain, No Gain! </p>"
   errors: 
     fallback_message: "I don't know what happened there! I'm a bit confused. "
     found_no_weekly_plan: "I couldn't find any data on your weekly plan. "

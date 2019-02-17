@@ -1,4 +1,4 @@
-const parseSpeech     = require('../js/parsespeech')
+const parseSpeech     = require('../js/parsespeech').parseSpeech
 const sessionManager  = require('../js/sessionmanager')
 const JMESPATH        = require('jmespath')
 

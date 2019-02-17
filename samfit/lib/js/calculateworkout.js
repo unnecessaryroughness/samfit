@@ -73,9 +73,6 @@ module.exports = calculateWorkout = () => {
   cardioexercises = generateRandoms(cardioexercises, allCardioExercises, totalmins)
   toningexercises = generateRandoms(toningexercises, allToningExercises, totalreps)
 
-  console.log(cardioexercises)
-  console.log(toningexercises)
-
   return {
     cardio: cardioexercises,
     toning: toningexercises

@@ -14,7 +14,7 @@ function sessionTemplate () {
 const getSession = (handlerInput) => {
   let sessionData = new sessionTemplate()
   let cachedSession = handlerInput.attributesManager.getSessionAttributes()
-  if (cachedSession.questionList) {
+  if (cachedSession.lastAction || cachedSession.speechText) {
     sessionData.load(cachedSession)
   }
   return sessionData
