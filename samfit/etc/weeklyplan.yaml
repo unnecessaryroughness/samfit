@@ -3,40 +3,34 @@ weeklyplan:
   monday:
     cardio:
     toning:
-      totalreps: 50
+      totalreps: 100
       toningexercises:
-        - squats
-        - press ups
+        - random: 3
   tuesday:
     cardio:
       totalmins: 60
       cardioexercises:
         - zumba
     toning:
-      totalreps: 100
+      totalreps: 120
       toningexercises:
         - random: 3
   wednesday:
     cardio:
-      totalmins: 0
-      cardioexercises:
     toning:
-      totalreps: 100
+      totalreps: 120
       toningexercises:
         - random: 3
   thursday:
     cardio:
-      totalmins: 60
-      cardioexercises:
-        - random: 1
     toning:
-      totalreps: 100
+      totalreps: 120
       toningexercises:
-        - random: 2
+        - random: 3
   friday:
     cardio:
     toning:
-      totalreps: 100
+      totalreps: 120
       toningexercises:
         - random: 3
   saturday:
@@ -45,7 +39,7 @@ weeklyplan:
       cardioexercises:
         - walking
     toning:
-      totalreps: 80
+      totalreps: 120
       toningexercises:
         - random: 2
   sunday:

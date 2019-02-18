@@ -19,15 +19,11 @@ exercises:
     - exercise: squats
       unit: reps
       min: 20
-      max: 60
+      max: 120
     - exercise: push ups
       unit: reps
       min: 10
-      max: 40
-    - exercise: lunges
-      unit: reps
-      min: 20
-      max: 60
+      max: 30
     - exercise: abs
       unit: reps
       min: 20
