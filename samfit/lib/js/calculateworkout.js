@@ -37,7 +37,12 @@ const generateRandoms = (requestedExercises, allExercises, totalUnits) => {
   for (let ex of actualExercises) {
     let extras = JMESPATH.search(allExercises, `[?exercise == '${ex}']`)[0]
     let useUnits = RANDINT(smallest(extras.min, totalUnits), smallest(extras.max, totalUnits)) 
-    totalUnits -= useUnits * (extras.multiplier || 1)
+    if (extras.multiplier) {
+      totalUnits -= useUnits * (extras.multiplier || 1)
+    } else {
+      useUnits = Math.ceil(useUnits/5)*5
+      totalUnits -= useUnits
+    }
     returnExercises.push({actual: useUnits.toString(), ...extras})
   }
 
