@@ -5,7 +5,7 @@ speech_patterns:
     goodbye: "Thank you for using Sam's Workout. Goodbye. "
     help: "You can ask me what is today's workout. "
   setup:
-    placeholder: "This is placeholder text."
+    placeholder: "This is placeholder text!"
   gameplay:
     today_is_a: "<p>It's a {{var.0}} day. </p>"
     todays_workout_is: "<p>Today's workout is: {{var.0}}. </p>"
