@@ -11,7 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "ask-sdk": "^2.3.0",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "jmespath": "^0.15.0",
     "js-yaml": "^3.13.1",
     "random-int": "^1.0.0",
